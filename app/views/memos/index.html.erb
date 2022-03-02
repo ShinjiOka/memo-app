@@ -1,9 +1,5 @@
 <h3>Memo App</h3>
 
-
-
-
-
 <div class="row">
     <% @memos.each do |memo|%>
         <div class="col-md-4">
@@ -15,6 +11,7 @@
                     <div class="list-group-item list-group-item-default">
                         <%= memo.body %>
                         <a href="memos/<%= memo.id %>">削除</a>
+                        <a href="memos/<%= memo.id %>/edit">編集</a>
                     </div>
                 </div>
             </div>
