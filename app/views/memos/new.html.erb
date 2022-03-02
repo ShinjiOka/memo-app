@@ -1,0 +1,17 @@
+<h3>New Page</h3>
+
+<%= form_with url: create_path do |form| %>
+    <div class="mb-3">
+        <%= form.label :Title, for: "exampleFormControlInput1", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control", id: "exampleFormControlInput1", placeholder: "Title" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :Content, for: "exampleFormControlInput2", class: "form-label" %>
+        <%= form.text_field :body, class: "form-control", id: "exampleFormControlInput2", placeholder: "Content" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :Category, for: "exampleFormControlInput3", class: "form-label"  %>
+        <%= form.select :select, [["work", 1], ["life", 2], ["hobby", 3], ["other", 4]], {include_blank: false, selected: "work"}, {id: "exampleFormControlInput3", class: "form-control"} %>
+    </div>
+    <%= form.submit :submit, class: "btn btn-primary" %>
+<% end %>
