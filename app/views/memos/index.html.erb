@@ -1,1 +1,6 @@
 <h3>Memo App</h3>
+
+<% @memos.each do |memo| %>
+    <p><%= memo.title%></p>
+    <p><%= memo.body%></p>
+<% end %>
