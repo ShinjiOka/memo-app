@@ -16,4 +16,10 @@ class MemosController < ApplicationController
         end
     end
     
+    def destroy
+        memo = Memo.find(params[:id])
+        memo.destroy
+        redirect_to root_path
+    end
+    
 end

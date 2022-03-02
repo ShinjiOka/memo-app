@@ -1,6 +1,23 @@
 <h3>Memo App</h3>
 
-<% @memos.each do |memo| %>
-    <p><%= memo.title%></p>
-    <p><%= memo.body%></p>
-<% end %>
+
+
+
+
+<div class="row">
+    <% @memos.each do |memo|%>
+        <div class="col-md-4">
+            <div class="mb-4">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-primary">
+                        <h5><%= memo.title %></h5>
+                    </div>
+                    <div class="list-group-item list-group-item-default">
+                        <%= memo.body %>
+                        <a href="memos/<%= memo.id %>">削除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
