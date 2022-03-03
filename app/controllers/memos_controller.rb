@@ -34,5 +34,4 @@ class MemosController < ApplicationController
         memo.save
         redirect_to root_path
     end
-    
 end
