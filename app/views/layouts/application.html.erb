@@ -24,13 +24,12 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Category
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">work</a></li>
-                <li><a class="dropdown-item" href="#">life</a></li>
-                <li><a class="dropdown-item" href="#">hobby</a></li>
-                <li><a class="dropdown-item" href="#">other</a></li>
+                <% @category.each do |category| %>
+                  <li><a class="dropdown-item" href="/category/<%= category.id %>"><%= category.name %></a></li>
+                <% end %>
               </ul>
             </li>
           </ul>
