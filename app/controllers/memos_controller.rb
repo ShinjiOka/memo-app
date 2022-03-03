@@ -12,7 +12,7 @@ class MemosController < ApplicationController
         if memo.save
             redirect_to root_path
         else
-            render new_path
+            redirect_to new_path
         end
     end
     
