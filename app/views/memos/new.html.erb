@@ -13,7 +13,7 @@
     </div>
     <div class="mb-3">
         <%= form.label :Category, for: "exampleFormControlInput3", class: "form-label"  %>
-        <%= form.select :id, [["work", 1], ["life", 2], ["hobby", 3], ["other", 4]], {include_blank: false, selected: "work"}, {id: "exampleFormControlInput3", class: "form-select"} %>
+        <%= form.select :id, ["選択してください",["work", 1], ["life", 2], ["hobby", 3], ["other", 4]], {include_blank: false, selected: "選択してください"}, {id: "exampleFormControlInput3", class: "form-select"} %>
     </div>
     <%= form.submit :submit, class: "btn btn-primary" %>
 <% end %>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/memos/:id/edit", to:"memos#edit"
   post "/memos/:id", to:"memos#update"
   get "/categories/:id", to:"categories#show"
+  get "/categories/:id/delete", to:"categories#destroy"
   get "/categories/:id/edit", to:"categories#edit"
-  post "/categories/:id", to:"memos#update"
+  post "/categories/:id", to:"categories#update"
 end
