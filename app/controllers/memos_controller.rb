@@ -19,7 +19,11 @@ class MemosController < ApplicationController
     def destroy
         memo = Memo.find(params[:id])
         memo.destroy
-        redirect_to root_path
+        if (action_name == "index")
+            redirect_to root_path
+        else (action_name == "show")
+            redirect_to controller: :categories, action: :show, id: memo.category_id
+        end
     end
     
     def edit
@@ -32,6 +36,10 @@ class MemosController < ApplicationController
         memo.body = params[:body]
         memo.category_id = params[:select_id]
         memo.save
-        redirect_to root_path
+        if (controller_path == "memos" && action_name == "edit")
+            redirect_to root_path
+        else (controller_path == "categories" && action_name == "edit")
+            redirect_to controller: :categories, action: :show, id: memo.category_id
+        end
     end
 end
