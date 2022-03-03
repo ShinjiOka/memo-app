@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get "/new", to:"memos#new"
   post "/create", to:"memos#create"
   get "/memos/:id", to:"memos#destroy"
-  get "memos/:id/edit", to:"memos#edit"
-  post "memos/:id", to:"memos#update"
+  get "/memos/:id/edit", to:"memos#edit"
+  post "/memos/:id", to:"memos#update"
 end
