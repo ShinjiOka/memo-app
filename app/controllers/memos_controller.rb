@@ -20,11 +20,6 @@ class MemosController < ApplicationController
         memo = Memo.find(params[:id])
         memo.destroy
         redirect_to root_path
-        # if (action_name == "index")
-        #     redirect_to root_path
-        # else (action_name == "show")
-        #     redirect_to controller: :categories, action: :show, id: memo.category_id
-        # end
     end
     
     def edit
