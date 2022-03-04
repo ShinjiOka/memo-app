@@ -1,0 +1,19 @@
+<div class="mb-3 mt-3">
+    <h1>Edit Page</h1>
+</div>
+
+<%= form_with url: "/categories/" + @memo.id.to_s do |form| %>
+    <div class="mb-3">
+        <%= form.label :Title, for: "exampleFormControlInput1", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control", id: "exampleFormControlInput1", placeholder: "Title", value: @memo.title %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :Content, for: "exampleFormControlInput2", class: "form-label" %>
+        <%= form.text_field :body, class: "form-control", id: "exampleFormControlInput2", placeholder: "Content", value: @memo.body %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :Category, for: "exampleFormControlInput3", class: "form-label"  %>
+        <%= form.select :select_id, ["選択してください", ["work", 1], ["life", 2], ["hobby", 3], ["other", 4]], {include_blank: false, selected: "選択してください"}, {id: "exampleFormControlInput3", class: "form-select"} %>
+    </div>
+    <%= form.submit :submit, class: "btn btn-primary" %>
+<% end %>

@@ -1,24 +1,15 @@
-# README
+アプリケーションの概要
+・メモアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーションの機能一覧
+・メモの作成、一覧表示、削除、編集の機能
+・メモのカテゴリ別に一覧表示
+・同じメモの内容や空のメモはデータベースに保存されない機能
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+アプリケーション内で使用している技術一覧
+・HTML
+・CSS
+・Bootstrap
+・Ruby
+・Ruby on Rails
+・SQLite

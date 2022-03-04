@@ -1,0 +1,23 @@
+<div class="mb-3 mt-3">
+    <h1><%= @categories.name %>'s memo</h1>
+</div>
+
+<div class="row">
+    <% @memos.each do |memo|%>
+        <div class="col-md-4">
+            <div class="mb-4">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-primary">
+                        <h5><%= memo.title %></h5>
+                        <p><%= memo.category.name %></p>
+                    </div>
+                    <div class="list-group-item list-group-item-default">
+                        <%= memo.body %>
+                        <a href="/categories/<%= memo.id %>/delete">削除</a>
+                        <a href="/categories/<%= memo.id %>/edit">編集</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
