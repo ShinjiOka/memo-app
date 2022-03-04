@@ -10,7 +10,6 @@ class CategoriesController < ApplicationController
         redirect_to controller: :categories, action: :show, id: memo.category_id
     end
     
-
     def edit
         @memo = Memo.find(params[:id])
     end
